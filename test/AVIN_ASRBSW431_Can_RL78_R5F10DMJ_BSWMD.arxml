@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00044.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>AVIN</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+    <SDGS>
+      <SDG>
+        <SD>Copyright (C) AVIN SYSTEMS PVT LTD 2020 - All Rights Reserved Unauthorized copying of this file, via any medium is strictly prohibited.</SD>
+      </SDG>
+    </SDGS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c93500b2-3e2b-40bb-b666-d1993f701457">
+      <SHORT-NAME>ArPackage_Can</SHORT-NAME>
+      <ADMIN-DATA>
+        <DOC-REVISIONS>
+          <DOC-REVISION>
+            <REVISION-LABEL>4.3.1</REVISION-LABEL>
+            <ISSUED-BY>AUTOSAR</ISSUED-BY>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.2.1</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-09-22</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">As per CR #11470 code generator version is update to 2.2.1</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">CR #11470</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.2.0</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-07-27</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">As per CR #11014 and #11144, Software and code generator versions are update to 2.2.0</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">Bug #10251 and Support #11143</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.1.0</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-02-05</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">As per CR #9223 and #9772 Software and code generator versions are update to 2.1.0</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">PDP ref</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.0.0</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2020-11-11</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">Initial version</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">PDP ref</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+        </DOC-REVISIONS>
+      </ADMIN-DATA>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="74a1e897-8e48-45eb-ac7c-fe9e0750ccb7">
+          <SHORT-NAME>BswImplementation_Can</SHORT-NAME>
+          <SW-VERSION>2.2.0</SW-VERSION>
+          <USED-CODE-GENERATOR>2.2.1</USED-CODE-GENERATOR>
+          <VENDOR-ID>72</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.3.1</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/ArPackage_Can/Can/BswInternalBehavior_Can</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="aa2ccb41-f2ec-4a9a-bfe0-e9fac44793c8">
+          <SHORT-NAME>Can</SHORT-NAME>
+          <MODULE-ID>80</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="330cde6f-9d2e-4ee3-b90e-e531c7d67ec5">
+              <SHORT-NAME>BswInternalBehavior_Can</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="eace7dd2-f838-4f30-9bd3-7716054038a6">
+                  <SHORT-NAME>Can_RxIndicationProtect</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_Can/Can/BswInternalBehavior_Can/Can_RxIndicationProtect</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+              </EXCLUSIVE-AREA-POLICYS>
+              <ENTITYS>
+                <BSW-INTERRUPT-ENTITY UUID="4a3e51e3-1b22-4c41-a3b3-b899254e65d5">
+                  <SHORT-NAME>Can_CheckWakeup</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_CheckWakeup</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="0e4760c5-740d-43f6-b7ab-0fe3ba09fd05">
+                  <SHORT-NAME>Can_DisableControllerInterrupts</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_DisableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="c50d5a15-5de5-49d8-924b-401a8fecfcf4">
+                  <SHORT-NAME>Can_EnableControllerInterrupts</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_EnableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="2eafaac4-eb79-4ebf-a160-489f90bd7b7f">
+                  <SHORT-NAME>Can_GetErrorCounter</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_GetErrorCounter</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="02c1173d-63b8-4b53-8b10-414eee805c69">
+                  <SHORT-NAME>Can_GetVersionInfo</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>Can_Init</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_Init</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="4f448fbd-6516-428a-a19d-54a4945d68be">
+                  <SHORT-NAME>Can_MainFunction_Read</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_Can/Can/BswInternalBehavior_Can/Can_RxIndicationProtect</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_MainFunction_Read</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="d4c08fe7-4b47-40d3-91f3-19c088993c48">
+                  <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_MainFunction_Wakeup</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="e254b76e-a454-4874-8e1f-8919ded5ec6f">
+                  <SHORT-NAME>Can_MainFunction_Write</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_MainFunction_Write</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="fda9bedd-37ba-43c9-9b86-dea42b63e423">
+                  <SHORT-NAME>Can_SetControllerMode</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_SetControllerMode</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+                <BSW-INTERRUPT-ENTITY UUID="5a0520d1-2403-4b71-b8fb-7e617cd3ab6e">
+                  <SHORT-NAME>Can_Write</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_Can/Can_Write</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_Can/Can/BswInternalBehavior_Can/Can</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-INTERRUPT-ENTITY>
+              </ENTITYS>
+              <SCHEDULER-NAME-PREFIXS>
+                <BSW-SCHEDULER-NAME-PREFIX>
+                  <SHORT-NAME>Can</SHORT-NAME>
+                </BSW-SCHEDULER-NAME-PREFIX>
+              </SCHEDULER-NAME-PREFIXS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="0b7f8469-5e27-4346-9b64-09f9d9ed43f8">
+          <SHORT-NAME>Can_CheckWakeup</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="4dfc26d6-5acc-4cbd-873d-5fcb0ba1ad08">
+          <SHORT-NAME>Can_DisableControllerInterrupts</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="3c9444bb-455a-4d8f-96a6-1258e1bf518e">
+          <SHORT-NAME>Can_EnableControllerInterrupts</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="6d619213-e0be-4d17-a042-257d64ca2b2d">
+          <SHORT-NAME>Can_GetErrorCounter</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="ec0417f4-b581-4536-94a4-1dd7599f9c73">
+          <SHORT-NAME>Can_GetVersionInfo</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="fabdead6-2a58-4883-8c06-60662abf85dc">
+          <SHORT-NAME>Can_Init</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="82226cc4-094d-4b43-b900-0ea71fcfc9e0">
+          <SHORT-NAME>Can_MainFunction_Read</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="35c3a796-072b-4925-9ea2-accc1d6ef9b9">
+          <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="c705f20d-0e5e-434e-aabc-28c90c555319">
+          <SHORT-NAME>Can_MainFunction_Write</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="4c448e58-dc8e-418b-ba0a-efc80b11cccd">
+          <SHORT-NAME>Can_SetControllerMode</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="0fe47443-69e0-4da2-85f7-bf004cc37980">
+          <SHORT-NAME>Can_Write</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00044.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>AVIN</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+    <SDGS>
+      <SDG>
+        <SD>Copyright (C) AVIN SYSTEMS PVT LTD 2020 - All Rights Reserved Unauthorized copying of this file, via any medium is strictly prohibited.</SD>
+      </SDG>
+    </SDGS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c93500b2-3e2b-40bb-b666-d1993f701457">
+      <SHORT-NAME>ArPackage_InNM</SHORT-NAME>
+      <ADMIN-DATA>
+        <DOC-REVISIONS>
+          <DOC-REVISION>
+            <REVISION-LABEL>4.2.2</REVISION-LABEL>
+            <ISSUED-BY>AUTOSAR</ISSUED-BY>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.1.3</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-10-01</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN"> Software version updated to 2.2.2</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">CR #11416</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+		    <DOC-REVISION>
+            <REVISION-LABEL>2.1.2</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-09-22</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN"> Used Code generator version updated to 2.1.1</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">CR #11467</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+		 </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.1.1</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-08-06</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN"> Software version updated to 2.2.1</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">CR# 11220</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.1.0</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2021-03-15</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">Used Code generator version is updated to 2.1.0 and Software version updated to 2.2.0</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">CR #10175</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+          <DOC-REVISION>
+            <REVISION-LABEL>2.0.0</REVISION-LABEL>
+            <ISSUED-BY>AVIN</ISSUED-BY>
+            <DATE>2020-11-10</DATE>
+            <MODIFICATIONS>
+              <MODIFICATION>
+                <CHANGE>
+                  <L-2 L="EN">Initial version</L-2>
+                </CHANGE>
+                <REASON>
+                  <L-2 L="EN">PDP ref</L-2>
+                </REASON>
+              </MODIFICATION>
+            </MODIFICATIONS>
+          </DOC-REVISION>
+        </DOC-REVISIONS>
+      </ADMIN-DATA>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="74a1e897-8e48-45eb-ac7c-fe9e0750ccb7">
+          <SHORT-NAME>BswImplementation_InNM</SHORT-NAME>
+          <SW-VERSION>2.2.2</SW-VERSION>
+          <USED-CODE-GENERATOR>2.1.1</USED-CODE-GENERATOR>
+          <VENDOR-ID>72</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/ArPackage_InNM/InNM/BswInternalBehavior_InNM</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-MODULE-DESCRIPTION UUID="aa2ccb41-f2ec-4a9a-bfe0-e9fac44793c8">
+          <SHORT-NAME>InNM</SHORT-NAME>
+          <MODULE-ID>1000</MODULE-ID>
+          <INTERNAL-BEHAVIORS>
+            <BSW-INTERNAL-BEHAVIOR UUID="330cde6f-9d2e-4ee3-b90e-e531c7d67ec5">
+              <SHORT-NAME>BswInternalBehavior_InNM</SHORT-NAME>
+              <EXCLUSIVE-AREAS>
+                <EXCLUSIVE-AREA UUID="eace7dd2-f838-4f30-9bd3-7716054038a6">
+                  <SHORT-NAME>InNM_NetworkStatus</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="ccff5b16-bc74-40c3-88d5-963367f7f8f7">
+                  <SHORT-NAME>InNM_WaitBusSleep</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="ccff5b16-bc74-40c3-88d5-963367f7f8f7">
+                  <SHORT-NAME>InNM_FastRecoveryCnt</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+                <EXCLUSIVE-AREA UUID="ccff5b16-bc74-40c3-88d5-963367f7f8f7">
+                  <SHORT-NAME>InNM_SlowRecoveryCnt</SHORT-NAME>
+                </EXCLUSIVE-AREA>
+              </EXCLUSIVE-AREAS>
+              <EXCLUSIVE-AREA-POLICYS>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM_NetworkStatus</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_Msn/InNM/BswInternalBehavior_InNM/InNM_WaitBusSleep</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_Msn/InNM/BswInternalBehavior_InNM/InNM_FastRecoveryCnt</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>
+                <BSW-EXCLUSIVE-AREA-POLICY>
+                  <API-PRINCIPLE>COMMON</API-PRINCIPLE>
+                  <EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_Msn/InNM/BswInternalBehavior_InNM/InNM_SlowRecoveryCnt</EXCLUSIVE-AREA-REF>
+                </BSW-EXCLUSIVE-AREA-POLICY>				
+              </EXCLUSIVE-AREA-POLICYS>
+              <ENTITYS>
+                <BSW-CALLED-ENTITY UUID="135458ac-0af7-450d-97d2-273c7bcba9ca">
+                  <SHORT-NAME>StartNM</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM/InNM_StartNM</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="0d66bbf3-2f68-44fd-84b0-640301a231ca">
+                  <SHORT-NAME>StopNM</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM/InNM_StopNM</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>GetStatus</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_GetStatus/InNM_GetStatus</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>GotoMode</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_GotoMode/InNM_GotoMode</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="7d2afb6c-4ba2-4c2f-bff6-e82e2d4d992b">
+                  <SHORT-NAME>D_Status</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_D_Status/InNM_D_Status</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>InNM_BusOffFastRecoveryTime</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM_BusOffFastRecoveryTime/InNM_InNM_BusOffFastRecoveryTime</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>InNM_BusOffSlowRecoveryTime</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM_BusOffFastRecoveryTime/InNM_InNM_BusOffFastRecoveryTime</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>InNM_BusOffFastRecoveryCount</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM_BusOffFastRecoveryCount/InNM_InNM_BusOffFastRecoveryCount</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>InNM_NodeAbsentThreshold</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM_NodeAbsentThreshold/InNM_InNM_NodeAbsentThreshold</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>InNM_NodeRecoveryThreshold</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM_NodeRecoveryThreshold/InNM_InNM_NodeRecoveryThreshold</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>I_MessageTransfer</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/NetworkStatus</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_I_MessageTransfer/InNM_I_MessageTransfer</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-CALLED-ENTITY UUID="3e7a395e-5fc7-4c4d-a3da-cdac66043eef">
+                  <SHORT-NAME>I_MessageTimeOut</SHORT-NAME>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_I_MessageTimeOut/InNM_I_MessageTimeOut</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-CALLED-ENTITY>
+                <BSW-SCHEDULABLE-ENTITY UUID="068c1f53-dbce-47ba-9a9c-5594607bdf8c">
+                  <SHORT-NAME>InNM_MainFunction</SHORT-NAME>
+                  <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/WaitBusSleep</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/FastRecoveryCnt</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                    <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/SlowRecoveryCnt</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                  </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                  <MINIMUM-START-INTERVAL>0.001</MINIMUM-START-INTERVAL>
+                  <REENTRANCY-LEVEL>SINGLE-CORE-REENTRANT</REENTRANCY-LEVEL>
+                  <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/ArPackage_InNM/InNM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                  <SCHEDULER-NAME-PREFIX-REF DEST="BSW-SCHEDULER-NAME-PREFIX">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM</SCHEDULER-NAME-PREFIX-REF>
+                </BSW-SCHEDULABLE-ENTITY>
+              </ENTITYS>
+              <EVENTS>
+                <BSW-TIMING-EVENT S="" UUID="8649e809-69ca-49c1-91b4-92a4341df21b">
+                  <SHORT-NAME>InNMMainFunctionTimePeriod</SHORT-NAME>
+                  <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/ArPackage_InNM/InNM/BswInternalBehavior_InNM/InNM_MainFunction</STARTS-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </BSW-TIMING-EVENT>
+              </EVENTS>
+              <SCHEDULER-NAME-PREFIXS>
+                <BSW-SCHEDULER-NAME-PREFIX>
+                  <SHORT-NAME>InNM</SHORT-NAME>
+                </BSW-SCHEDULER-NAME-PREFIX>
+              </SCHEDULER-NAME-PREFIXS>
+            </BSW-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </BSW-MODULE-DESCRIPTION>
+        <BSW-MODULE-ENTRY UUID="18ef78c1-9e8f-49c9-9a5c-8904d5cfa158">
+          <SHORT-NAME>StartNM</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="35c3a796-072b-4925-9ea2-accc1d6ef9b9">
+          <SHORT-NAME>StopNM</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>GetStatus</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>GotoMode</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>InNM_BusOffFastRecoveryTime</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>InNM_BusOffSlowRecoveryTime</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>InNM_BusOffFastRecoveryCount</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>InNM_NodeAbsentThreshold</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>InNM_NodeRecoveryThreshold</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+         <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>I_MessageTransfer</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>I_MessageTimeOut</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>REGULAR</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="717e59bb-f3a3-4da0-9ffb-25503c954dbc">
+          <SHORT-NAME>D_Status</SHORT-NAME>
+          <IS-REENTRANT>true</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>CALLBACK</CALL-TYPE>
+          <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+        <BSW-MODULE-ENTRY UUID="35c3a796-072b-4925-9ea2-accc1d6ef9b9">
+          <SHORT-NAME>InNM_MainFunction</SHORT-NAME>
+          <IS-REENTRANT>false</IS-REENTRANT>
+          <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+        </BSW-MODULE-ENTRY>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

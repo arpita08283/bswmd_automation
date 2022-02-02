@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>AVIN Systems</title>
+  
+  
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/avin-systems.jpg') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+  
+</head>
+<body>  
+
+<center>
+
+
+<div class="row">
+  <div class="center_box">
+    <div class="card" id="home">
+	<img src="https://media.glassdoor.com/sqll/1173421/avin-systems-squarelogo-1575638586629.png" align="left">
+	  <h1 style="color:blue">AVIN Systems Private Limited</h1>
+	  <h1 style="color:green">BSWMD AUTOMATION</h1>
+
+<table>
+
+<form method="POST" action="/files">
+<tr>
+<td>
+<p><b>input file path  : </b></p>
+<input type="text" name="iname" placeholder="enter path here">
+</td>
+
+<!---
+<td>
+</br>
+<input type="file" webkitdirectory multiple">
+
+
+</td>
+
+<td>
+</br>
+<button name="text"><a href="/files/">ok</a></button>
+</td>
+--->
+<tr>
+
+<td>
+<p><b>output file path  : </b></p>
+<input type="text" name="outname" placeholder="enter path here">
+
+</td>
+
+</tr>
+</table>
+
+</br></br>
+
+ <input class="favorite styled"
+       type="submit"
+       value="start">
+
+</form>
+	  
+	</div>
+</div>
+</div>
+
+
+</center>
+</body>
+</html>
